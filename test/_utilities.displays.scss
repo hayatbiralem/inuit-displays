@@ -1,0 +1,92 @@
+@import "true";
+
+@import "../node_modules/sass-mq/mq";
+@import "../settings/settings.displays";
+@import "../tools/tools.displays";
+
+@include test-module("[mixin] inuit-displays") {
+
+  @include test("it should output correctly without any breakpoint") {
+
+    @include assert() {
+
+      @include output {
+        $values: (none, block);
+        @include inuit-displays($values);
+      }
+
+      @include expect {
+        .u-display-none,
+        .u-hide {
+          display: none !important;
+        }
+
+        .u-display-block,
+        .u-show {
+          display: block !important;
+        }
+      }
+    }
+  }
+
+  @include test("it should output correctly with given breakpoint") {
+
+    @include assert() {
+
+      @include output {
+        $values: (none, block);
+        @include inuit-displays($values, \@tablet);
+      }
+
+      @include expect {
+        .u-display-none\@tablet,
+        .u-hide\@tablet {
+          display: none !important;
+        }
+
+        .u-display-block\@tablet,
+        .u-show\@tablet {
+          display: block !important;
+        }
+      }
+    }
+  }
+
+  @include test("it should output correctly with given aliases") {
+
+    @include assert() {
+
+      @include output {
+        $values: (
+                table,
+                table-row,
+                table-cell
+        );
+        $aliases: (
+                table: tb,
+                table-row: tr,
+                table-cell: td
+        );
+        @include inuit-displays($values, null, $aliases);
+      }
+
+      @include expect {
+        .u-display-table,
+        .u-tb {
+          display: table !important;
+        }
+
+        .u-display-table-row,
+        .u-tr {
+          display: table-row !important;
+        }
+
+        .u-display-table-cell,
+        .u-td {
+          display: table-cell !important;
+        }
+      }
+    }
+  }
+
+}

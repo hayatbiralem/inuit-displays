@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #DISPLAYS
+   ========================================================================== */
+
+/**
+ * Simple display helpers.
+ */
+
+
+// check if enabled
+@if $inuit-displays != false {
+
+  /**
+   * A series of width helper classes that you can use to show or hide things.
+   * Use these in your markup:
+   *
+   * <div class="u-display-none">
+   * <div class="u-display-inline">
+   * <div class="u-display-inline-block">
+   * <div class="u-display-block">
+   *
+   * The following will generate displays helper classes based on the values
+   * defined in the `$inuit-display-values` list.
+   */
+
+  @include inuit-displays($inuit-displays);
+
+  /**
+   * If we’re using Sass-MQ, automatically generate responsive helpers for each of our
+   * defined breakpoints, and give them a Responsive Suffix, e.g.:
+   *
+   * <div class="u-display-none@tablet">
+   */
+
+  @if (variable-exists(mq-breakpoints)) {
+    @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+      @include mq($from: $inuit-bp-name) {
+        @include inuit-displays($inuit-displays, \@#{$inuit-bp-name});
+      }
+    }
+  }
+
+}

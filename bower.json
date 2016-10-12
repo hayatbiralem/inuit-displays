@@ -1,0 +1,22 @@
+{
+  "name": "inuit-displays",
+  "homepage": "https://github.com/hayatbiralem/inuit-displays",
+  "authors": [
+    "Ömür Yanıkoğlu <hayatbiralem@gmail.com>"
+  ],
+  "description": "Simple display helpers for the inuitcss framework.",
+  "main": "utilities/_utilities.displays.scss",
+  "keywords": [
+    "inuitcss",
+    "itcss",
+    "inuit-displays"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

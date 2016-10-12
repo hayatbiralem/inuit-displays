@@ -1,0 +1,31 @@
+///* ==========================================================================
+//   #DISPLAYS
+//   ========================================================================== */
+
+// A mixin to spit out our display classes.
+//
+//   .u-display-none@tablet
+
+@mixin inuit-displays($displays: $inuit-displays, $breakpoint: null, $aliases: $inuit-display-aliases) {
+
+  // Loop through the responsive display values.
+  @each $display-value in $displays {
+
+    // Make a rule in the format `.u-display-block[@<breakpoint>]`.
+    $rule: '.u-display-#{$display-value}#{$breakpoint}';
+
+    // Add alias to rule if exists.
+    @if $aliases != false {
+      $alias: map-get($aliases, $display-value);
+      @if $alias != null {
+        $rule: $rule + ", .u-#{$alias}#{$breakpoint}";
+      }
+    }
+
+    // Build it.
+    #{$rule} {
+      display: $display-value !important;
+    }
+  }
+
+}

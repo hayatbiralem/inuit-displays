@@ -1,0 +1,36 @@
+{
+  "name": "inuit-displays",
+  "version": "0.1.0",
+  "description": "Simple display helpers for the inuitcss framework.",
+  "main": "main.scss",
+  "devDependencies": {
+    "glob": "^7.1.1",
+    "mocha": "^3.1.2",
+    "node-sass": "^3.10.1",
+    "sass-mq": "^3.2.9",
+    "sass-true": "^2.1.3",
+    "stylelint": "^7.4.2",
+    "stylelint-scss": "^1.3.4"
+  },
+  "scripts": {
+    "test": "npm run lint && mocha test/run.js",
+    "lint": "stylelint \"**/*.scss\" --syntax scss",
+    "build": "node-sass --output-style=expanded main.scss dist/main.css",
+    "help": "node-sass --help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hayatbiralem/inuit-displays.git"
+  },
+  "keywords": [
+    "inuitcss",
+    "itcss",
+    "inuit-displays"
+  ],
+  "author": "Ömür Yanıkoğlu <hayatbiralem@gmail.com> (hayatbiralem.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hayatbiralem/inuit-displays/issues"
+  },
+  "homepage": "https://github.com/hayatbiralem/inuit-displays#readme"
+}

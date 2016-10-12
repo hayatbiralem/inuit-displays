@@ -1,0 +1,33 @@
+/* ==========================================================================
+   INUIT-DISPLAYS
+   ========================================================================== */
+
+/**
+ * inuit-displays, by @hayatbiralem
+ *
+ * github.com/hayatbiralem | hayatbiralem.com
+ */
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Displays.............Inuit display and display alias settings.
+ *
+ * TOOLS
+ * Sass MQ..............inuitcss’ default media query manager.
+ * Displays.............A mixin to spit out our display classes.
+ *
+ * UTILITIES
+ * Displays.............Simple display helpers.
+ */
+
+// SETTINGS
+@import "settings/settings.displays";
+
+// TOOLS
+@import "node_modules/sass-mq/mq";
+@import "tools/tools.displays";
+
+// UTILITIES
+@import "utilities/utilities.displays";
