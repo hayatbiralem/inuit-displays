@@ -22,7 +22,7 @@ Sample examples here:
 <div class="u-hide u-display-inline@tablet"></div>
 
 <!-- Show on mobile and hide on tablet and upper -->
-<div class="u-show u-hide@tablet"></div>
+<div class="u-hide@tablet"></div>
 ```
 
 You can imagine the other variations.
