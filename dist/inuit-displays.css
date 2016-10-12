@@ -55,11 +55,11 @@
 }
 
 /**
-   * If we’re using Sass-MQ, automatically generate responsive helpers for each of our
-   * defined breakpoints, and give them a Responsive Suffix, e.g.:
-   *
-   * <div class="u-display-none@tablet">
-   */
+     * If we’re using Sass-MQ, automatically generate responsive helpers for each of our
+     * defined breakpoints, and give them a Responsive Suffix, e.g.:
+     *
+     * <div class="u-display-none@tablet">
+     */
 @media (min-width: 20em) {
   .u-display-none\@mobile, .u-hide\@mobile {
     display: none !important;
