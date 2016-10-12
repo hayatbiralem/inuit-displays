@@ -1,6 +1,6 @@
 {
   "name": "inuit-displays",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Simple display helpers for the inuitcss framework.",
   "main": "main.scss",
   "devDependencies": {
