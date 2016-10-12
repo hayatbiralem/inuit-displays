@@ -7,6 +7,26 @@ Simple display helpers for the inuitcss framework.
 npm install inuit-displays
 ```
 
+## Examples
+
+Sample examples here:
+
+```html
+<!-- Hide on all -->
+<div class="u-hide"></div>
+
+<!-- Hide on mobile and show on tablet and upper -->
+<div class="u-hide u-show@tablet"></div>
+
+<!-- Hide on mobile and show on tablet and upper with `display: inline;` -->
+<div class="u-hide u-display-inline@tablet"></div>
+
+<!-- Show on mobile and hide on tablet and upper -->
+<div class="u-show u-hide@tablet"></div>
+```
+
+You can imagine the other variations.
+
 ## Usage
 
 Default display properties here:
