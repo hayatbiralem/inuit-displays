@@ -15,7 +15,6 @@ With bower
 bower install inuit-displays --save
 ```
 
-Download
 You can download the latest version or checkout all the releases [here](https://github.com/hayatbiralem/inuit-displays/releases).
 
 ## Examples
