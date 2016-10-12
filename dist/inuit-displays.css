@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* ========================================================================
+   #DISPLAYS
+   ======================================================================== */
+
+/**
+ * Simple display helpers.
+ */
+
+/**
+   * A series of width helper classes that you can use to show or hide things.
+   * Use these in your markup:
+   *
+   * <div class="u-display-none">
+   * <div class="u-display-inline">
+   * <div class="u-display-inline-block">
+   * <div class="u-display-block">
+   *
+   * The following will generate displays helper classes based on the values
+   * defined in the `$inuit-display-values` list.
+   */
+
+.u-display-none, .u-hide {
+  display: none !important;
+}
+
+.u-display-inline {
+  display: inline !important;
+}
+
+.u-display-inline-block {
+  display: inline-block !important;
+}
+
+.u-display-block, .u-show {
+  display: block !important;
+}
+
+/**
+   * If we’re using Sass-MQ, automatically generate responsive helpers for each of our
+   * defined breakpoints, and give them a Responsive Suffix, e.g.:
+   *
+   * <div class="u-display-none@tablet">
+   */
+
+@media (min-width: 20em) {
+  .u-display-none\@mobile, .u-hide\@mobile {
+    display: none !important;
+  }
+  .u-display-inline\@mobile {
+    display: inline !important;
+  }
+  .u-display-inline-block\@mobile {
+    display: inline-block !important;
+  }
+  .u-display-block\@mobile, .u-show\@mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 46.25em) {
+  .u-display-none\@tablet, .u-hide\@tablet {
+    display: none !important;
+  }
+  .u-display-inline\@tablet {
+    display: inline !important;
+  }
+  .u-display-inline-block\@tablet {
+    display: inline-block !important;
+  }
+  .u-display-block\@tablet, .u-show\@tablet {
+    display: block !important;
+  }
+}
+
+@media (min-width: 61.25em) {
+  .u-display-none\@desktop, .u-hide\@desktop {
+    display: none !important;
+  }
+  .u-display-inline\@desktop {
+    display: inline !important;
+  }
+  .u-display-inline-block\@desktop {
+    display: inline-block !important;
+  }
+  .u-display-block\@desktop, .u-show\@desktop {
+    display: block !important;
+  }
+}
+
+@media (min-width: 81.25em) {
+  .u-display-none\@wide, .u-hide\@wide {
+    display: none !important;
+  }
+  .u-display-inline\@wide {
+    display: inline !important;
+  }
+  .u-display-inline-block\@wide {
+    display: inline-block !important;
+  }
+  .u-display-block\@wide, .u-show\@wide {
+    display: block !important;
+  }
+}
