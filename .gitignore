@@ -38,3 +38,6 @@ jspm_packages
 
 # PhpStorm files
 .idea/
+
+# SASS files
+.sass-cache/
