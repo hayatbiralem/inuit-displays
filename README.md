@@ -5,13 +5,13 @@ Simple display helpers for the inuitcss framework.
 
 With npm
 
-```bash
+```shell
 npm i inuit-displays -S
 ```
 
 With bower 
 
-```bash
+```shell
 bower install inuit-displays --save
 ```
 
@@ -110,7 +110,7 @@ before import inuit-displays.
 
 You can run unit tests with this command:
 
-```bash
+```shell
 npm test
 ```
 
@@ -118,7 +118,7 @@ npm test
 
 You can build changes to dist/main.css file with this command:
 
-```bash
+```shell
 npm run build
 ```
 
