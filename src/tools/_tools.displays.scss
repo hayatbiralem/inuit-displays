@@ -1,10 +1,8 @@
-///* ==========================================================================
-//   #DISPLAYS
-//   ========================================================================== */
-
 // A mixin to spit out our display classes.
 //
-//   .u-display-none@tablet
+// .u-display-none@tablet
+
+/* stylelint-disable string-quotes */
 
 @mixin inuit-displays($displays: $inuit-displays, $breakpoint: null, $aliases: $inuit-display-aliases) {
 
@@ -18,14 +16,16 @@
     @if $aliases != false {
       $alias: map-get($aliases, $display-value);
       @if $alias != null {
-        $rule: $rule + ", .u-#{$alias}#{$breakpoint}";
+        $rule: $rule + ', .u-#{$alias}#{$breakpoint}';
       }
     }
 
     // Build it.
-    #{$rule} {
+    #{unquote($rule)} {
       display: $display-value !important;
     }
   }
 
 }
+
+/* stylelint-enable string-quotes */

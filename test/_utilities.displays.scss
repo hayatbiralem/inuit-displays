@@ -1,8 +1,8 @@
 @import "true";
 
 @import "../node_modules/sass-mq/mq";
-@import "../settings/settings.displays";
-@import "../tools/tools.displays";
+@import "../src/settings/settings.displays";
+@import "../src/tools/tools.displays";
 
 @include test-module("[mixin] inuit-displays") {
 

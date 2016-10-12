@@ -1,11 +1,6 @@
-/* ==========================================================================
-   #DISPLAYS
-   ========================================================================== */
-
 /**
  * Simple display helpers.
  */
-
 
 // check if enabled
 @if $inuit-displays != false {
@@ -25,15 +20,14 @@
 
   @include inuit-displays($inuit-displays);
 
+  /**
+   * If we’re using Sass-MQ, automatically generate responsive helpers for each of our
+   * defined breakpoints, and give them a Responsive Suffix, e.g.:
+   *
+   * <div class="u-display-none@tablet">
+   */
+
   @if (variable-exists(mq-breakpoints)) {
-
-    /**
-     * If we’re using Sass-MQ, automatically generate responsive helpers for each of our
-     * defined breakpoints, and give them a Responsive Suffix, e.g.:
-     *
-     * <div class="u-display-none@tablet">
-     */
-
     @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
       @include mq($from: $inuit-bp-name) {
         @include inuit-displays($inuit-displays, \@#{$inuit-bp-name});

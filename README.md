@@ -106,20 +106,36 @@ $inuit-displays: false;
 
 before import inuit-displays.
 
+## Working with Node
+
+First of all install dependencies with:
+
+```shell
+npm install
+```
+
+That's it.
+
+## Working with Gulp
+
+Build and watch with this:
+
+```shell
+gulp
+```
+
+or only build with this:
+
+```shell
+gulp build
+```
+
 ## Tests
 
 You can run unit tests with this command:
 
 ```shell
 npm test
-```
-
-## Build
-
-You can build changes to dist/main.css file with this command:
-
-```shell
-npm run build
 ```
 
 ## Contributing

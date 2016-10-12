@@ -1,10 +1,14 @@
 {
   "name": "inuit-displays",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Simple display helpers for the inuitcss framework.",
   "main": "inuit-displays.scss",
   "devDependencies": {
     "glob": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.3.2",
     "mocha": "^3.1.2",
     "node-sass": "^3.10.1",
     "sass-mq": "^3.2.9",
@@ -15,8 +19,7 @@
   "scripts": {
     "test": "npm run lint && mocha test/run.js",
     "lint": "stylelint \"**/*.scss\" --syntax scss",
-    "build": "node-sass --output-style=expanded inuit-displays.scss dist/inuit-displays.css",
-    "help": "node-sass --help"
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",

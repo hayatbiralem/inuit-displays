@@ -1,33 +1,100 @@
-/* ==========================================================================
-   INUIT-DISPLAYS
-   ========================================================================== */
+/* ========================================================================
+   #DISPLAYS
+   ======================================================================== */
+
+// Inuitcss generates display helper classes. E.g.:
+//
+// .u-display-none
+// .u-display-inline
+// .u-display-inline-block
+// .u-display-block
+
+$inuit-displays: (
+        none,
+        inline,
+        inline-block,
+        block
+) !default;
+
+// Inuitcss generates display helper aliases. E.g.:
+//
+// .u-show
+// .u-hide@tablet
+// .u-hide
+// .u-show@tablet
+
+$inuit-display-aliases: (
+        none: hide,
+        block: show
+) !default;
+
+// A mixin to spit out our display classes.
+//
+// .u-display-none@tablet
+
+/* stylelint-disable string-quotes */
+
+@mixin inuit-displays($displays: $inuit-displays, $breakpoint: null, $aliases: $inuit-display-aliases) {
+
+  // Loop through the responsive display values.
+  @each $display-value in $displays {
+
+    // Make a rule in the format `.u-display-block[@<breakpoint>]`.
+    $rule: '.u-display-#{$display-value}#{$breakpoint}';
+
+    // Add alias to rule if exists.
+    @if $aliases != false {
+      $alias: map-get($aliases, $display-value);
+      @if $alias != null {
+        $rule: $rule + ', .u-#{$alias}#{$breakpoint}';
+      }
+    }
+
+    // Build it.
+    #{unquote($rule)} {
+      display: $display-value !important;
+    }
+  }
+
+}
+
+/* stylelint-enable string-quotes */
 
 /**
- * inuit-displays, by @hayatbiralem
- *
- * github.com/hayatbiralem | hayatbiralem.com
+ * Simple display helpers.
  */
 
-/**
- * CONTENTS
- *
- * SETTINGS
- * Displays.............Inuit display and display alias settings.
- *
- * TOOLS
- * Sass MQ..............inuitcss’ default media query manager.
- * Displays.............A mixin to spit out our display classes.
- *
- * UTILITIES
- * Displays.............Simple display helpers.
- */
+// check if enabled
+@if $inuit-displays != false {
 
-// SETTINGS
-@import "settings/settings.displays";
+  /**
+   * A series of width helper classes that you can use to show or hide things.
+   * Use these in your markup:
+   *
+   * <div class="u-display-none">
+   * <div class="u-display-inline">
+   * <div class="u-display-inline-block">
+   * <div class="u-display-block">
+   *
+   * The following will generate displays helper classes based on the values
+   * defined in the `$inuit-display-values` list.
+   */
 
-// TOOLS
-@import "tools/tools.displays";
-@import "node_modules/sass-mq/mq";
+  @include inuit-displays($inuit-displays);
 
-// UTILITIES
-@import "utilities/utilities.displays";
+  /**
+   * If we’re using Sass-MQ, automatically generate responsive helpers for each of our
+   * defined breakpoints, and give them a Responsive Suffix, e.g.:
+   *
+   * <div class="u-display-none@tablet">
+   */
+
+  @if (variable-exists(mq-breakpoints)) {
+    @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+      @include mq($from: $inuit-bp-name) {
+        @include inuit-displays($inuit-displays, \@#{$inuit-bp-name});
+      }
+    }
+  }
+
+}

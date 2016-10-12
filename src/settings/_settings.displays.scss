@@ -1,0 +1,29 @@
+/* ========================================================================
+   #DISPLAYS
+   ======================================================================== */
+
+// Inuitcss generates display helper classes. E.g.:
+//
+// .u-display-none
+// .u-display-inline
+// .u-display-inline-block
+// .u-display-block
+
+$inuit-displays: (
+        none,
+        inline,
+        inline-block,
+        block
+) !default;
+
+// Inuitcss generates display helper aliases. E.g.:
+//
+// .u-show
+// .u-hide@tablet
+// .u-hide
+// .u-show@tablet
+
+$inuit-display-aliases: (
+        none: hide,
+        block: show
+) !default;
