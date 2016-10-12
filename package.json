@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/hayatbiralem/inuit-displays/issues"
   },
-  "homepage": "https://github.com/hayatbiralem/inuit-displays#readme"
+  "homepage": "https://github.com/hayatbiralem/inuit-displays#readme",
+  "engines": {
+    "node": ">= 6.7.0"
+  }
 }
