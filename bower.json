@@ -5,7 +5,7 @@
     "Ömür Yanıkoğlu <hayatbiralem@gmail.com>"
   ],
   "description": "Simple display helpers for the inuitcss framework.",
-  "main": "main.scss",
+  "main": "inuit-displays.scss",
   "keywords": [
     "inuitcss",
     "itcss",
