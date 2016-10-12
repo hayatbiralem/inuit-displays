@@ -3,9 +3,20 @@ Simple display helpers for the inuitcss framework.
 
 ## Installation
 
+With npm
+
 ```bash
-npm install inuit-displays
+npm i inuit-displays -S
 ```
+
+With bower 
+
+```bash
+bower install inuit-displays --save
+```
+
+Download
+You can download the latest version or checkout all the releases [here](https://github.com/hayatbiralem/inuit-displays/releases).
 
 ## Examples
 
