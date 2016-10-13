@@ -39,6 +39,14 @@ You can imagine the other variations.
 
 ## Usage
 
+You can import this plugin into a project sample code like this: 
+
+```scss
+@import "node_modules/inuit-displays/inuit-displays.scss";
+```
+
+You can override settings with writing your custom definitions before import plugin.
+
 Default display properties here:
 
 ```scss
