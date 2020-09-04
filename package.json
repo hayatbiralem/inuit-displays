@@ -10,7 +10,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.3.2",
     "mocha": "^3.1.2",
-    "node-sass": "^3.10.1",
+    "node-sass": "^4.14.1",
     "sass-mq": "^3.2.9",
     "sass-true": "^2.1.3",
     "stylelint": "^7.4.2",
